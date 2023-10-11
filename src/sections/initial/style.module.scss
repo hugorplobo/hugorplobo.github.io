@@ -1,0 +1,19 @@
+.info {
+    .avatar {
+        position: relative;
+        width: 40%;
+        max-width: 200px;
+        float: right;
+        margin-left: .2rem;
+    }
+
+    h2, p:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
