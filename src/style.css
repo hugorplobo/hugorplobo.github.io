@@ -33,6 +33,32 @@
   text-shadow: 0rem .2rem 1rem currentColor;
 }
 
-html, a {
+#player {
+  display: none;
+}
+
+html, a, button {
   cursor: url("/cursor.png"), auto;
+}
+
+p {
+  &::after {
+    content: "_";
+    opacity: 0;
+    position: absolute;
+    font-weight: bold;
+  }
+  
+  &:hover::after {
+    animation: blink .8s steps(1) infinite;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
