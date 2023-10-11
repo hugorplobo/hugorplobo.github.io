@@ -13,6 +13,20 @@
         font-weight: bold;
     }
 
+    h3 {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, var(--main-color), transparent);
+        }
+    }
+
     .containerInner {
         display: flex;
         flex-direction: column;
