@@ -1,10 +1,11 @@
 import { Container } from "../../components/container";
 import { Link } from "../../components/link";
+import { Player } from "../../components/player";
 import classes from "./style.module.scss";
 
 export function InitialSection() {
   return (
-    <Container title="I'm Hugo">
+    <Container id="initial" title="I'm Hugo">
       <div className={classes.info}>
         <img
           className={classes.avatar}
@@ -13,17 +14,19 @@ export function InitialSection() {
         />
         
         <h2>A software engineer and web developer</h2>
+        <p>Welcome to my personal webpage!</p>
         <p>I'm 20 years old, I'm from Ceará, Brazil and currently taking a software engineering degree at the Federal University of Ceara (UFC).</p>
         <p>I love to learn about new things and try to build cool projects in my free time :D</p>
       </div>
 
+      <Player />
+
       <div className={classes.links}>
-        <Link href="#">About</Link>
-        <Link href="#">Skills</Link>
-        <Link href="#">Experience</Link>
-        <Link href="#">Projects</Link>
-        <Link href="#">Contact</Link>
-        <Link href="#">Resume</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#experience">Experience</Link>
+        <Link href="#projects">Projects</Link>
+        <Link href="#contact">Contact</Link>
+        <Link href="#resume">Resume</Link>
       </div>
     </Container>
   );

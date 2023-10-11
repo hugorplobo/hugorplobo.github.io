@@ -5,6 +5,7 @@
         max-width: 200px;
         float: right;
         margin-left: .2rem;
+        z-index: 2;
     }
 
     h2, p:not(:last-child) {
@@ -13,7 +14,11 @@
 }
 
 .links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+
+    a {
+        flex: 1;
+    }
 }
