@@ -1,0 +1,13 @@
+.badge {
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .2rem .5rem;
+    max-width: fit-content;
+
+    img {
+        width: 20px;
+    }
+}
