@@ -6,11 +6,24 @@
 
     h1 {
         position: absolute;
-        top: -1.5rem;
+        top: -1.35rem;
         left: .5rem;
         padding: 0 .5rem;
-        background: #212123;
         font-weight: bold;
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 50% 0;
+            height: 4px;
+            width: 100%;
+            background: black;
+        }
     }
 
     h3 {
@@ -65,6 +78,7 @@
         height: 2px;
         background-color: var(--main-color);
         left: -.5rem;
+        z-index: -1;
     }
 
     &::before {

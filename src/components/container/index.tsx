@@ -11,7 +11,7 @@ export function Container({ id, title, children }: Props) {
   return (
     <div className={classes.container}>
       <div className={classes.containerInner}>
-        <h1 id={id}>{ title }</h1>
+        <h1 id={id}><span>{ title }</span></h1>
         { children }
       </div>
     </div>

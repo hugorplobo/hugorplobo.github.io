@@ -20,7 +20,6 @@
   width: 100vw;
   min-height: 100vh;
   padding: 3rem 0;
-  background-color: #212123;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -38,10 +37,6 @@
   display: none;
 }
 
-html, a, button {
-  cursor: url("/cursor.png"), auto;
-}
-
 p {
   &::after {
     content: "_";
@@ -53,6 +48,55 @@ p {
   &:hover::after {
     animation: blink .8s steps(1) infinite;
   }
+}
+
+html, a, button {
+  cursor: url("/cursor.png"), auto;
+}
+
+#root::before,
+#root::after,
+html::before,
+html::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+#root::before {
+  background: radial-gradient(
+    circle at center,
+    var(--main-color) 0%,
+    rgba(var(--alt-rgb), 0.78) 58%,
+    rgba(var(--alt-rgb), 0.55) 80%,
+    rgba(var(--alt-rgb), 0.27) 93%,
+    rgba(var(--alt-rgb), 0) 100%
+  );
+  opacity: 0.15;
+  position: fixed;
+  z-index: 2;
+}
+
+html::before {
+  background: black;
+  padding: 30px;
+  pointer-events: auto;
+  z-index: -1;
+}
+
+html::after {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(var(--alt-rgb), .2) 70%,
+    rgba(var(--alt-rgb), .2)
+  );
+  background-size: 100% 0.5rem;
+  z-index: -1;
 }
 
 @keyframes blink {
