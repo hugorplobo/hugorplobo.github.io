@@ -1,5 +1,6 @@
-import { ExperienceSection } from "./sections/experience";
+import { ExperienceSection } from "./sections/experiences";
 import { InitialSection } from "./sections/initial";
+import { ProjectsSection } from "./sections/projects";
 import { SkillsSection } from "./sections/skills";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <InitialSection />      
       <SkillsSection />
       <ExperienceSection />
+      <ProjectsSection />
     </>
   );
 }
