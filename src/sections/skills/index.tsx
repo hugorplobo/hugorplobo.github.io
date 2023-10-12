@@ -14,6 +14,7 @@ export function SkillsSection() {
           <Badge title="Typescript" icon="typescript" />
           <Badge title="C++" icon="c++" />
           <Badge title="Python" icon="python" />
+          <Badge title="Rust" icon="rust" />
         </div>
       </div>
       <div className={classes.section}>
