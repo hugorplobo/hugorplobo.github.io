@@ -7,7 +7,7 @@ export function Player() {
   
   useEffect(() => {
     player.load("lP26UCnoH9s");
-    player.setVolume(20);
+    player.setVolume(15);
   });
 
   function onPlay() {

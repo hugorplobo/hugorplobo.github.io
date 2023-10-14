@@ -32,7 +32,11 @@ export function ProjectsSection() {
           <Badge title="Docker" icon="docker" />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti obcaecati autem omnis ad, repellat eius nulla mollitia voluptate ducimus, quidem amet et minima nisi, repudiandae cumque veniam! Tenetur, unde pariatur?
+          A Telegram bot that daily notifies the menu of the university restaurant (RU)
+          on my campus and keeps you informed about how many credits you have.
+          It is based on web scraping for the daily menu collection and user information retrieval.
+          You can check the repository <InlineLink text="here" href="https://github.com/hugorplobo/ru-telegram-bot" /> and
+          check it online on telegram <InlineLink text="here" href="https://t.me/ruqxdbot" />.
         </p>
       </div>
       <div className={classes.project}>
@@ -44,7 +48,14 @@ export function ProjectsSection() {
           <Badge title="Docker" icon="docker" />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti obcaecati autem omnis ad, repellat eius nulla mollitia voluptate ducimus, quidem amet et minima nisi, repudiandae cumque veniam! Tenetur, unde pariatur?
+          A Telegram bot to save your files quickly and easily, and access them from any chat.
+          The files are saved on Telegram servers, and their IDs are managed by the bot.
+          When requested by the user, the file is forwarded using the Telegram API.
+          It also uses Preact to display a web interface integrated into the application for file viewing.
+          You can check the repositories for the <InlineLink text="bot" href="https://github.com/hugorplobo/kumo-bot/" />,
+          the <InlineLink text="API" href="https://github.com/hugorplobo/kumo-api" /> and
+          the <InlineLink text="web app" href="https://github.com/hugorplobo/kumo-web" />. He's also
+          online and you can talk with him <InlineLink text="here" href="https://t.me/kumoo_bot" />.
         </p>
       </div>
     </Container>
