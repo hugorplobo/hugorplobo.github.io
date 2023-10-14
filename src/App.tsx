@@ -1,3 +1,4 @@
+import { InlineLink } from "./components/inlineLink";
 import { ContactSection } from "./sections/contact";
 import { ExperienceSection } from "./sections/experiences";
 import { InitialSection } from "./sections/initial";
@@ -12,6 +13,7 @@ function App() {
       <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
+      <footer>Inspired from <InlineLink href="https://codepen.io/carterfromsl/pen/rNoropM" text="here" /></footer>
     </>
   );
 }
