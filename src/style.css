@@ -1,109 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Source Code Pro", monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #fafafa;
 }
 
-:root {
-  --main-color: #3c84ff;
-  --alt-rgb: 18, 54, 117;
+.app {
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    display: grid;
+    place-items: center;
 }
 
-::selection {
-  background-color: rgba(var(--alt-rgb), .7);
+.term {
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    background: #212123;
+    border-radius: 10px;
+    box-shadow: 0px 0px 32px 5px rgba(0, 0, 0, 0.25);
 }
 
-#root {
-  width: 100vw;
-  min-height: 100vh;
-  padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2.5rem;
-  overflow-x: hidden;
+.title-bar {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
-#root * {
-  color: var(--main-color);
-  text-shadow: 0rem .2rem 1rem currentColor;
-}
-
-#player {
-  display: none;
-}
-
-p {
-  &::after {
-    content: "_";
-    opacity: 0;
+.btns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     position: absolute;
-    font-weight: bold;
-  }
-  
-  &:hover::after {
-    animation: blink .8s steps(1) infinite;
-  }
+    left: 10px;
+    top: 10px;
 }
 
-html, a, button {
-  cursor: url("/cursor.png"), auto;
+.close,
+.minimize,
+.maximize {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }
 
-#root::before,
-#root::after,
-html::before,
-html::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
+.close {
+    background: #ff5f57;
 }
 
-#root::before {
-  background: radial-gradient(
-    circle at center,
-    var(--main-color) 0%,
-    rgba(var(--alt-rgb), 0.78) 58%,
-    rgba(var(--alt-rgb), 0.55) 80%,
-    rgba(var(--alt-rgb), 0.27) 93%,
-    rgba(var(--alt-rgb), 0) 100%
-  );
-  opacity: 0.15;
-  position: fixed;
-  z-index: 2;
+.minimize {
+    background: #febc2e;
 }
 
-html::before {
-  background: black;
-  padding: 30px;
-  pointer-events: auto;
-  z-index: -1;
+.maximize {
+    background: #28c840;
 }
 
-html::after {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    transparent 50%,
-    rgba(var(--alt-rgb), .2) 70%,
-    rgba(var(--alt-rgb), .2)
-  );
-  background-size: 100% 0.5rem;
-  z-index: -1;
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+.dir {
+    color: crimson;
+    margin-bottom: 2px;
+}
+
+.arrow {
+    color: aquamarine;
+}
+
+.input {
+    display: inline;
+}
+
+.prompt:last-child .input::after {
+    position: static;
+    content: "⠀";
+    background: white;
+}
+
+.out {
+    white-space: pre-line;
 }

@@ -1,20 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <title>Hi, I'm Hugo</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <div id="player"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hugorplobo.github.io</title>
+</head>
+<body>
+    <div class="app">
+        <div class="term">
+            <div class="title-bar">
+                <div class="btns">
+                    <div class="close"></div>
+                    <div class="minimize"></div>
+                    <div class="maximize"></div>
+                </div>
+                <div x-data x-text="$store.data.dir" class="title"></div>
+            </div>
+            <div x-data class="content">
+                <template x-for="prompt in $store.data.prompts">
+                    <div class="prompt">
+                        <p class="dir" x-text="prompt.dir ?? $store.data.dir"></p>
+                        <span class="arrow">❯</span>
+                        <pre class="input" x-text="prompt.input"></pre>
+                        <p class="out" x-text="prompt.out"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/main.ts"></script>
+</body>
 </html>
