@@ -16,15 +16,17 @@
                 </div>
                 <div x-data x-text="$store.data.dir" class="title"></div>
             </div>
-            <div x-data class="content">
-                <template x-for="prompt in $store.data.prompts">
-                    <div class="prompt">
-                        <p class="dir" x-text="prompt.dir ?? $store.data.dir"></p>
-                        <span class="arrow">❯</span>
-                        <pre class="input" x-text="prompt.input"></pre>
-                        <p class="out" x-text="prompt.out"></p>
-                    </div>
-                </template>
+            <div class="content-wrapper">
+                <div x-data class="content">
+                    <template x-for="prompt in $store.data.prompts">
+                        <div class="prompt">
+                            <p class="dir" x-text="prompt.dir ?? $store.data.dir"></p>
+                            <span class="arrow">❯</span>
+                            <pre class="input" x-text="prompt.input"></pre>
+                            <p class="out" x-text="prompt.out"></p>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
     </div>
