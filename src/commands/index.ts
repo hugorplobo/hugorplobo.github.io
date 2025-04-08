@@ -4,6 +4,7 @@ import { clear } from "./clear";
 import { ls } from "./ls";
 import { cd } from "./cd";
 import { cat } from "./cat";
+import { neofetch } from "./neofetch";
 
 export const commands = [
     helloWorld,
@@ -12,4 +13,5 @@ export const commands = [
     ls,
     cd,
     cat,
+    neofetch,
 ];
